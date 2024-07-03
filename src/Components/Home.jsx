@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useContext, useRef } from "react";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../CSS/home.css";
+import { ProviderContext } from "./ContextProvider";
 const Home = () => {
+  const { time, products, loading } = useContext(ProviderContext);
+  const carouselRef = useRef(null);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  const chunkSize = 4;
+  const productChunks = [];
+
+  for (let i = 0; i < products.length; i += chunkSize) {
+    productChunks.push(products.slice(i, i + chunkSize));
+  }
+
+  const handlePrev = () => {
+    if (carouselRef.current) {
+      carouselRef.current.prev();
+    }
+  };
+
+  const handleNext = () => {
+    if (carouselRef.current) {
+      carouselRef.current.next();
+    }
+  };
   return (
     <>
       <Container>
@@ -47,11 +73,79 @@ const Home = () => {
           </Col>
         </Row>
         <br />
-        <div className="mt-5 d-flex ">
-             <div className="badge">  </div>
-             <p className="text-center">Today's</p>
+        <div className="badge-section">
+          <div className="badge"> </div>
+          <p className="mt-3">Today's</p>
         </div>
+
+        {/* ------------Flash Sales------- */}
         
+        <div className="d-flex mt-5 justify-content-between">
+          <div className="timer">
+            <h1>Flash Sales</h1>
+            <div className="timer-inner">
+              <div>
+                <p className="timer-label">Days</p>
+                <h3>{time.days}</h3>
+              </div>
+              <span className="timer-span">:</span>
+              <div>
+                <p className="timer-label">Hours</p>
+                <h3>{time.hours}</h3>
+              </div>
+              <span className="timer-span">:</span>
+              <div>
+                <p className="timer-label">Minutes</p>
+                <h3>{time.minutes}</h3>
+              </div>
+              <span className="timer-span">:</span>
+              <div>
+                <p className="timer-label">Seconds</p>
+                <h3>{time.seconds}</h3>
+              </div>
+            </div>
+          </div>
+          <div className="carousel-custom-controls">
+            <button onClick={handlePrev} className="btn btn-primary ">
+              Previous
+            </button>
+            <button onClick={handleNext} className="btn btn-primary">
+              Next
+            </button>
+          </div>
+        </div>
+
+        {/* ---------Fetching Products from API-----------  */}
+
+        <div className=" mt-5 ">
+          <Carousel ref={carouselRef} controls={false} indicators={false}>
+            {productChunks.map((productChunk, index) => (
+              <Carousel.Item key={index}>
+                <Row>
+                  {productChunk.map((product) => (
+                    <Col key={product.id} sm={3}>
+                      <div
+                        className="card"
+                        style={{ margin: "auto", marginBottom: "20px" }}
+                      >
+                        <img
+                          src={product.images[0]}
+                          className="card-img-top"
+                          alt={product.title}
+                        />
+                        <div className="card-body">
+                          <h5 className="card-title">{product.title}</h5>
+                          {/* <p className="card-text">{product.description}</p>yyy */}
+                          <p className="card-text">${product.price}</p>
+                        </div>
+                      </div>
+                    </Col>
+                  ))}
+                </Row>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </div>
       </Container>
     </>
   );

@@ -14,10 +14,12 @@ import Cart from "./Components/Cart";
 import WishList from "./Components/WishList";
 import Error404 from "./Components/Error404";
 import { Container } from "react-bootstrap";
+import { ContextProvider } from "./Components/ContextProvider";
 
 const App = () => {
   return (
     <>
+    <ContextProvider>
       <Router>
         <Header />
         <Container className="px-5">
@@ -37,6 +39,7 @@ const App = () => {
         </Container>
         <Footer />
       </Router>
+      </ContextProvider>
     </>
   );
 };
