@@ -1,0 +1,23 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+}
+.home-section{
+    border-right: 1px solid black;
+    top: 0;
+}
+#slider-img{
+    width:100%;
+    object-fit: cover;
+    border-radius: 10px;
+    height: 300px;
+}
+.carousel-img{
+    width: 100%;
+}
+.badge{
+    width: 25px;
+    /* border: 2px solid black; */
+    height: 50px;
+    background-color: #d02020 ;
+}

@@ -1,13 +1,37 @@
+.homelink{
+    width: 100%;
+    height: 200px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.home-link{
+    text-decoration: none;
+    color: rgb(105, 104, 104);
+}
+.contact-link{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.contact-link-active{
+    font-weight: bolder;
+    /* color: aqua; */
+    background-color: aqua;
+}
+
 .contactmain{
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     justify-content:center;
-    align-items: center;
-    gap: 30px;
+    align-items:end;
+    gap: 22px;
+    /* border: 1px solid black; */
 }
 .details{
-    width: 24%;
+    width: 35%;
     height: 430px;
     /* border: 1px solid black; */
     display: flex;
@@ -20,12 +44,16 @@
     border-radius: 10px;
 }
 .forminput{
-    width: 60%;
+    width: 65%;
     border: 1px solid black;
     height: 430px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:white;
+    box-shadow: 0px 0px 2px 2px white;
+    border: 1px solid rgb(218, 214, 214);
+    border-radius: 10px;
 }
 .callicon{
     font-size: 24px;
@@ -75,22 +103,41 @@
     justify-content: space-between;
 }
 .txtbox{
-    border:1px solid black;
+    /* border:1px solid black; */
     width: 100%;
-    height: 170px;
+    height:230px;
 }
 .sendmsgbtn{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%;
-    height: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 .Allinputs{
-    width: 96%;
-    border: 1px solid green;
+    width:94%;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 .inputboxes{
     width: 32%;
+    border: none;
+    background-color: rgb(225, 230, 230);
+    border-radius: 4px;
+}
+.textinput{
+    border: none;
+    background-color: rgb(227, 230, 230);
+    border-radius: 4px;
+}
+.sendmsgbtn button{
+    background-color: red;
+    border: none;
+    padding: 8px 35px;
+    color: white;
+    font-weight:600;
+    border-radius: 5px;
 }

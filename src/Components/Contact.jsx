@@ -1,9 +1,13 @@
 import React from 'react';
 import "../CSS/contact.css";
+import { NavLink } from "react-router-dom";
 
 const Contact = () => {
   return (
     <>
+    <div className="homelink">
+    <NavLink activeClassName="home-link-active" className="home-link" to="/" >Home&nbsp;&nbsp;</NavLink >/&nbsp;&nbsp;<NavLink activeClassName="contact-link-active" className="contact-link" to="/contact" >Contact</NavLink>
+    </div>
       <div className="contactmain">
         <div className="details">
           <div className="calltous">
@@ -29,15 +33,16 @@ const Contact = () => {
         <div className="forminput">
           <div className="Allinputs">
             <div className="inputs">
-              <input type="text" className='inputboxes' placeholder='Your Name *' />
-              <input type="text" className='inputboxes' placeholder='Your Email *' />
-              <input type="text" className='inputboxes' placeholder='Your Phone *' />
+              <input type="text" className='inputboxes' placeholder=' Your Name *' />
+              <input type="text" className='inputboxes' placeholder=' Your Email *' />
+              <input type="text" className='inputboxes' placeholder=' Your Phone *' />
             </div>
             <div className='txtbox'>
-              hi
+            <textarea name="" id="" cols="82" rows="9" className='textinput' placeholder=' Your Message '>
+            </textarea>
             </div>
             <div className="sendmsgbtn">
-              hi
+            <button>Send Message</button>
             </div>
           </div>
         </div>
