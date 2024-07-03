@@ -1,0 +1,42 @@
+/* -------header section1---- */
+.header-section1{
+    border: 2px solid black;
+}
+
+.header-section{
+    display: flex;
+    border-bottom: 1px solid black;
+}
+#nav-search{
+    border: none;
+    padding: 4px 20px 5px 3px;
+    background-color: hsl(0, 4%, 95%);
+    border-radius: 5px;
+}
+#nav-search:focus{
+    border: none;
+    outline: none;
+}
+.search-bar{
+    position: relative;
+    background-color: hsl(0, 4%, 95%);
+    border-radius: 5px;
+    border: none;
+    width: 230px;
+}
+.search-icon{
+    position: absolute;
+    right: 5%;
+    top: 5px;
+}
+#nav-search::placeholder{
+    font-size: 13px;
+    text-align: center;
+    color: black;
+}
+.nav-links{
+    font-size: 17px;
+}
+.nav-links>.nav-link:focus{
+    text-decoration: underline;
+}
