@@ -1,0 +1,96 @@
+.contactmain{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 30px;
+}
+.details{
+    width: 24%;
+    height: 430px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    background-color:white;
+    box-shadow: 0px 0px 2px 2px white;
+    border: 1px solid rgb(218, 214, 214);
+    border-radius: 10px;
+}
+.forminput{
+    width: 60%;
+    border: 1px solid black;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.callicon{
+    font-size: 24px;
+    color: white;
+    background-color: red;
+    padding: 1px 7px;
+    border-radius: 50%;
+}
+.heading{
+    font-weight: bolder;
+}
+.calltous > div{
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+.txtcalltous{
+    line-height: 2;
+  
+}
+.calltous{
+    width: 80%;
+    height: 170px;
+    border-bottom: 1px solid black;
+}
+.writetous{
+    width: 80%;
+    height: 200px;
+    margin-top: 10px;
+    /* border: 1px solid red; */
+}
+.writetous > div{
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+.txtwritetoous{
+    line-height: 2;
+    /* padding-top: 45px; */
+    margin-top: 30px;
+}
+.inputs{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.txtbox{
+    border:1px solid black;
+    width: 100%;
+    height: 170px;
+}
+.sendmsgbtn{
+    border: 1px solid black;
+    width: 100%;
+    height: 100px;
+}
+.Allinputs{
+    width: 96%;
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.inputboxes{
+    width: 32%;
+}
