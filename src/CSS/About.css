@@ -1,0 +1,57 @@
+.aboutchild {
+  display: flex;
+  width: 100%;
+  height: 600px;
+}
+.aboutinnerchild {
+  width: 50%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  letter-spacing: 0.5;
+  text-align: justify;
+}
+.aboutinnerchild1 {
+  width: 50%;
+  height: 600px;
+}
+#aboutimg {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  padding-top: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutinnerchild h1 {
+  letter-spacing: 0.5;
+  font-weight: 500;
+  font-size: 60px;
+  text-align: justify;
+}
+.aboutinnerchild p {
+  letter-spacing: 0.5;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: justify;
+}
+.aboutfirst {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutfirstchild {
+  width: 20%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid black;
+}
