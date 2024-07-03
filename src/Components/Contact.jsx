@@ -18,7 +18,7 @@ const Contact = () => {
               We are available 24/7,7 days a week.
               Phone: +8801611112222
             </div>
-          </div>
+          </div> 
           <div className="writetous">
             <div>
               <i class="bi bi-envelope callicon"></i>&nbsp;&nbsp;<span className='heading'>Write To Us</span>
