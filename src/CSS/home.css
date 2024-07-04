@@ -21,3 +21,45 @@
     height: 50px;
     background-color: #d02020 ;
 }
+.badge-section{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    text-align: center;
+    color: #d02020;
+    font-weight: bold;
+}
+.timer{
+    display: flex;
+    /* border: 2px solid black; */
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+.timer-inner{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 0.2px;
+    text-align: center;
+}
+.timer-inner>div>h3{
+    font-weight: bold;
+}
+.timer-label{
+    font-weight:bold;
+    font-size: 12px;
+}
+.timer-span{
+    font-weight: bold;
+    color: #e76565;
+    font-size: 30px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
+  border-radius: 50%; /* round shape */
+  width: 40px;
+  height: 40px;
+}
