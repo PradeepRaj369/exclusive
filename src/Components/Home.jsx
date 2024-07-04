@@ -1,10 +1,11 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../CSS/home.css";
 import { ProviderContext } from "./ContextProvider";
 const Home = () => {
-  const { time, products, loading } = useContext(ProviderContext);
+  const [isHovered, setIsHovered] = useState(false);
+  const { time, products, loading, addToCart, item } = useContext(ProviderContext);
   const carouselRef = useRef(null);
 
   if (loading) {
@@ -29,6 +30,7 @@ const Home = () => {
       carouselRef.current.next();
     }
   };
+
   return (
     <>
       <Container>
@@ -79,7 +81,7 @@ const Home = () => {
         </div>
 
         {/* ------------Flash Sales------- */}
-        
+
         <div className="d-flex mt-5 justify-content-between">
           <div className="timer">
             <h1>Flash Sales</h1>
@@ -106,11 +108,11 @@ const Home = () => {
             </div>
           </div>
           <div className="carousel-custom-controls">
-            <button onClick={handlePrev} className="btn btn-primary ">
-              Previous
+            <button onClick={handlePrev} className="carrousel-btn">
+              <i class="bi bi-arrow-left"></i>
             </button>
-            <button onClick={handleNext} className="btn btn-primary">
-              Next
+            <button onClick={handleNext} className="carrousel-btn">
+              <i class="bi bi-arrow-right"></i>
             </button>
           </div>
         </div>
@@ -127,12 +129,26 @@ const Home = () => {
                       <div
                         className="card"
                         style={{ margin: "auto", marginBottom: "20px" }}
+                        id="hover-image-container"
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
                       >
                         <img
                           src={product.images[0]}
                           className="card-img-top"
                           alt={product.title}
+                          id="card-img"
                         />
+                        {isHovered && (
+                          <button
+                            className="add-to-cart-button"
+                            onClick={() => addToCart(item)}
+                          >
+                            Add to Cart
+                          </button>
+                        )}
+                        <i class="bi bi-heart" id="wishlist"></i>
+                        <i class="bi bi-eye" id="eye"></i>
                         <div className="card-body">
                           <h5 className="card-title">{product.title}</h5>
                           {/* <p className="card-text">{product.description}</p>yyy */}

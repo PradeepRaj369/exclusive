@@ -3,6 +3,11 @@ import React, { children, createContext, useEffect, useState } from 'react'
 
 const ProviderContext=createContext();
 const ContextProvider = ({children}) => {
+// --------------Hover Add to Cart---------
+// const [isHovered, setIsHovered]=useState(false);
+
+// ----------- Timer -------------
+
     const initialDays = `0${3}`;
   const initialHours = 24;
   const initialMinutes = 60;
@@ -59,6 +64,8 @@ const ContextProvider = ({children}) => {
     return () => clearInterval(timer);
   }, []);
 
+// ------------- Fetch Products------------
+
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   console.log(products)
@@ -73,8 +80,16 @@ const ContextProvider = ({children}) => {
         setLoading(false);
       });
   }, []);
+
+// ---------Cart Items----------
+const [cart, setCart] = useState([]);
+
+const addToCart = (item) => {
+  setCart((prevCart) => [...prevCart, item]);
+};
+
   return (
-    <ProviderContext.Provider value={{time, products , loading}}>
+    <ProviderContext.Provider value={{time, products , loading, cart, addToCart}}>
       {children}
     </ProviderContext.Provider>
   )

@@ -56,10 +56,61 @@
     color: #e76565;
     font-size: 30px;
 }
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
-  border-radius: 50%; /* round shape */
-  width: 40px;
-  height: 40px;
+.carrousel-btn{
+    border-radius: 50%;
+    border: none;
+    font-size: 28px;
+    margin-right: 10px;
 }
+#card-img{
+    position: relative;
+}
+#wishlist{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 15px;
+    background-color: white;
+    padding: 4px 8px;
+    border-radius: 50%;
+}
+#eye{
+    position: absolute;
+    right: 8px;
+    top:50px;
+    font-size: 15px;
+    background-color: white;
+    padding: 4px 8px;
+    border-radius: 50%;
+}
+
+
+/* src/HoverImage.css */
+#hover-image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image {
+    display: block;
+  }
+  
+  .add-to-cart-button {
+    position: absolute;
+    top: 60%;
+    /* left: 50%; */
+    /* bottom: 0; */
+    width: 100%;
+    /* transform: translate(-50%, -50%); */
+    display: none;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #hover-image-container:hover .add-to-cart-button {
+    display: block;
+  }
+  

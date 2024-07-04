@@ -53,7 +53,7 @@
 .callicon{
     font-size: 24px;
     color: white;
-    background-color: red;
+    background-color: rgb(242, 46, 46);
     padding: 1px 7px;
     border-radius: 50%;
 }
@@ -124,7 +124,7 @@
     border-radius: 4px;
 }
 .sendmsgbtn button{
-    background-color: red;
+    background-color: rgb(242, 46, 46);
     border: none;
     padding: 8px 35px;
     color: white;
