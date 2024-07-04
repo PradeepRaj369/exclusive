@@ -4,10 +4,7 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
-<<<<<<< HEAD
-=======
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
->>>>>>> ab629839f60c05f481dca419d67228ca8febe8ef
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

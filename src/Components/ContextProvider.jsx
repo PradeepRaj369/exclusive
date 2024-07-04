@@ -7,6 +7,14 @@ const ContextProvider = ({children}) => {
   const initialHours = 24;
   const initialMinutes = 60;
   const initialSeconds = 30;
+// -----------count Quantity cart page-------
+const[count,setCount]=useState(0);
+const increment= ()=>setCount(count+1);
+const decrement= ()=>{
+  if(count>0){
+  setCount(count-1);
+}
+}
 
   const [time, setTime] = useState({
     days: initialDays,
@@ -74,7 +82,7 @@ const ContextProvider = ({children}) => {
       });
   }, []);
   return (
-    <ProviderContext.Provider value={{time, products , loading}}>
+    <ProviderContext.Provider value={{time, products , loading,count,increment,decrement}}>
       {children}
     </ProviderContext.Provider>
   )

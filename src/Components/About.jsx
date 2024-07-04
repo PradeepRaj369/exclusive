@@ -13,20 +13,20 @@ const About = () => {
           <div className="aboutinnerchild">
             <h1>Our Story</h1>
             <p>
-              Launced in 2015, Exclusive is South Asia’s premier online shopping{" "}
+              Launced in 2015, Exclusive is South Asia’s premier online shopping
               <br />
-              makterplace with an active presense in Bangladesh. Supported by{" "}
+              makterplace with an active presense in Bangladesh. Supported by
               <br />
-              wide range of tailored marketing, data and service solutions,{" "}
+              wide range of tailored marketing, data and service solutions,
               <br />
-              Exclusive has 10,500 sallers and 300 brands and serves 3 millioons{" "}
+              Exclusive has 10,500 sallers and 300 brands and serves 3 millioons
               <br />
-              customers across the region.{" "}
+              customers across the region.
             </p>
             <p>
-              Exclusive has more than 1 Million products to offer, growing at a{" "}
+              Exclusive has more than 1 Million products to offer, growing at a
               <br />
-              very fast. Exclusive offers a diverse assotment in categories{" "}
+              very fast. Exclusive offers a diverse assotment in categories
               <br />
               ranging from consumer
             </p>
@@ -41,7 +41,7 @@ const About = () => {
               <div className="aboutthirdimg1">
                 <i class="bi bi-shop-window"></i>
               </div>
-            </div>{" "}
+            </div>
             <br />
             <h1>10.5k</h1>
             <p>Sallers active our site</p>
@@ -51,7 +51,7 @@ const About = () => {
               <div className="aboutdiff1">
                 <i class="bi bi-currency-dollar"></i>
               </div>
-            </div>{" "}
+            </div>
             <br />
             <h1>33k</h1>
             <p>Mopnthly Produduct Sale</p>
@@ -61,7 +61,7 @@ const About = () => {
               <div className="aboutthirdimg1">
                 <i class="bi bi-bag-heart-fill"></i>
               </div>
-            </div>{" "}
+            </div>
             <br />
             <h1>45.5k</h1>
             <p>Customer active in our site</p>
@@ -71,7 +71,7 @@ const About = () => {
               <div className="aboutthirdimg1">
                 <i class="bi bi-coin"></i>
               </div>
-            </div>{" "}
+            </div>
             <br />
             <h1>25k</h1>
             <p>Anual gross sale in our site</p>
@@ -127,7 +127,7 @@ const About = () => {
               <div className="aboutthirdimg1">
                 <i class="bi bi-truck"></i>
               </div>
-            </div>{" "}
+            </div>
             <br />
             <h4>FREE AND FAST DELIVERY</h4>
             <p>Free delivery for all orders over $140</p>
@@ -137,7 +137,7 @@ const About = () => {
               <div className="aboutthirdimg1">
                 <i class="bi bi-headset"></i>
               </div>
-            </div>{" "}
+            </div>
             <br />
             <h4>24/7 CUSTOMER SERVICE</h4>
             <p>Friendly 24/7 customer support</p>
@@ -147,7 +147,7 @@ const About = () => {
               <div className="aboutthirdimg1">
                 <i class="bi bi-shield-check"></i>
               </div>
-            </div>{" "}
+            </div>
             <br />
             <h4>MONEY BACK GUARANTEE</h4>
             <p> We reurn money within 30 days</p>

@@ -4,9 +4,6 @@ import { NavLink } from "react-router-dom";
 
 const Contact = () => {
   return (
-    <div>
-      
-    </div>
     <>
       <div className="homelink">
         <NavLink activeClassName="home-link-active" className="home-link" to="/" >Home&nbsp;&nbsp;</NavLink >/&nbsp;&nbsp;<NavLink activeClassName="contact-link-active" className="contact-link" to="/contact" >Contact</NavLink>
