@@ -39,7 +39,7 @@ const Header = () => {
               <h3 className="fw-600">Exclusive</h3>
             </div>
             <Nav className="gap-3 nav-links">
-              <Link to="/home" className="nav-link">
+              <Link to="/" className="nav-link">
                 Home
               </Link>
               <Link to="/contact" className="nav-link">
