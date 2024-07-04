@@ -1,0 +1,180 @@
+.page-navigation{
+    height: 160px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.page-navigation > div{
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.home-link{
+    text-decoration: none;
+    color: rgb(105, 104, 104);
+}
+.cart-link{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.cartheadings{
+    box-shadow: 0px 0px 2px 2px rgb(219, 218, 218);
+    border: 1px solid rgb(218, 214, 214);
+    border-radius: 10px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.subhead{
+    width: 90%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+}
+.maincart{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+.subheaditems > div {
+    height: 60px;
+    width: 170px;
+}
+.price{
+    display: flex;
+    justify-content: center;
+    width: 58px!important;
+    align-items: center;
+}
+.subheaditems{
+    width: 90%;
+    height: 60px;
+    display: flex;
+    justify-content:space-between;
+    align-items:end;
+}
+.quantity{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 18px;
+}
+.subtotal{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 20px;
+}
+.quaninside{
+    border: 1px solid rgb(158, 157, 157);
+    height: 50px;
+    width: 40%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.upbtn{
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+}
+.downbtn{
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+}
+.quaninside div:first-child{
+    font-size: 22px;
+}
+.btnscart{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.btnscart > button{
+    padding: 6px 35px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: none;
+}
+.maincheckout{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.coupon{
+    width: 44%;
+    height: 300px;
+}
+.proceedscheckout{
+    width: 41%;
+    border: 1px solid black;
+    height: 300px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.coupon button{
+    padding: 8px 28px;
+    color: white;
+    background-color: rgb(243, 25, 25);
+    font-weight:500;
+    border-radius: 4px;
+    border: none;
+}
+ 
+.coupon input{
+    width: 60%;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.coupon > div{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    height:45px;
+}
+.carttotal{
+    width: 95%;
+    /* border: 1px solid black; */
+}
+.Cartfields{
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    /* border: 1px solid green; */
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.totalcart{
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.processcheck{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.processcheck button{
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(243, 25, 25);
+    color:white;
+     font-weight:500;
+}

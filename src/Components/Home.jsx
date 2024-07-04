@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useState } from "react";
-import { Container, Row, Col, Carousel } from "react-bootstrap";
+import { Container, Row, Col, Carousel,Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../CSS/home.css";
 import { ProviderContext } from "./ContextProvider";
@@ -75,6 +75,9 @@ const Home = () => {
           </Col>
         </Row>
         <br />
+
+            {/* ----------- Today's ------------- */}
+
         <div className="badge-section">
           <div className="badge"> </div>
           <p className="mt-3">Today's</p>
@@ -128,7 +131,7 @@ const Home = () => {
                     <Col key={product.id} sm={3}>
                       <div
                         className="card"
-                        style={{ margin: "auto", marginBottom: "20px" }}
+                        style={{ margin: "auto", marginBottom: "30px", height:"220px"}}
                         id="hover-image-container"
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
@@ -160,6 +163,201 @@ const Home = () => {
                 </Row>
               </Carousel.Item>
             ))}
+          </Carousel>
+        </div>
+        <div className="d-flex justify-content-center align-items-center mt-5 view-cart-btn">
+          <button className="view-btn">View All Products</button>
+        </div>
+
+          {/* --------------------- Categories ---------------------- */}
+
+        <div className="badge-section">
+          <div className="badge"> </div>
+          <p className="mt-3">Categories</p>
+        </div>
+
+        <div className="d-flex mt-5 justify-content-between">
+          <div className="Categories-section">
+            <h1>Browse By Category</h1>
+          </div>
+          <div className="carousel-custom-controls">
+            <button onClick={handlePrev} className="carrousel-btn">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+            <button onClick={handleNext} className="carrousel-btn">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <div className="Category-items">
+            <div>
+            <i class="bi bi-phone"></i>
+            <p>Phones</p>
+            </div>
+            <div>
+            <i class="bi bi-laptop"></i>
+            <p>Computers</p>
+            </div>
+            <div>
+            <i class="bi bi-smartwatch"></i>
+            <p>SmartWatch</p>
+            </div>
+            <div>
+            <i class="bi bi-camera"></i>
+            <p>Camera</p>
+            </div>
+            <div>
+            <i class="bi bi-headphones"></i>
+            <p>HeadPhones</p>
+            </div>
+            <div>
+            <i class="bi bi-controller"></i>
+            <p>Gaming</p>
+            </div>
+        </div>
+
+        {/* ------------- Best Selling  Products---------------- */}
+
+        <div className="badge-section">
+          <div className="badge"> </div>
+          <p className="mt-3">This Month</p>
+        </div>
+
+        <div className="d-flex mt-5 justify-content-between">
+          <div className="Categories-section">
+            <h1>Best Selling Products</h1>
+          </div>
+          <div className="carousel-custom-controls">
+            <button style={{backgroundColor:"#c51919", color:"white", border:"none", padding:"10px 25px", borderRadius:"5px"}} >View All</button>
+          </div>
+        </div>
+
+        <div className=" mt-5 ">
+          <Carousel ref={carouselRef} controls={false} indicators={false}>  
+                <Row>
+                  {products.slice(0, 4).map((product) => (
+                    <Col key={product.id} sm={3}>
+                      <div
+                        className="card"
+                        style={{ margin: "auto", marginBottom: "30px", height:"220px"}}
+                        id="hover-image-container"
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                      >
+                        <img
+                          src={product.images[0]}
+                          className="card-img-top"
+                          alt={product.title}
+                          id="card-img"
+                        />
+                        {isHovered && (
+                          <button
+                            className="add-to-cart-button"
+                            onClick={() => addToCart(item)}
+                          >
+                            Add to Cart
+                          </button>
+                        )}
+                        <i class="bi bi-heart" id="wishlist"></i>
+                        <i class="bi bi-eye" id="eye"></i>
+                        <div className="card-body">
+                          <h5 className="card-title">{product.title}</h5>
+                          {/* <p className="card-text">{product.description}</p>yyy */}
+                          <p className="card-text">${product.price}</p>
+                        </div>
+                      </div>
+                    </Col>
+                  ))}
+                </Row>
+          </Carousel>
+        </div>
+
+        <div className="jbl-product">
+              <img src="https://in.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwbc5ed184/JBL_BOOMBOX3_WIFI_HERO_37919_x4.png?sw=320&sh=320" alt="" />
+        </div>
+        <div className="jbl-product-content">
+            <h6 style={{color:"#00e600"}}>Categories</h6>
+            <br />
+            <h1 className="text-light">Enhance Your</h1>
+            <h1 className="text-light">Music Experience</h1>
+            <div className="jbl-timer">
+              <div>
+                <h5>{time.days}</h5>
+                <p>Days</p>
+              </div>
+              <div>
+              <h5>{time.hours}</h5>
+              <p>Hours</p>
+              </div>
+              <div>
+              <h5>{time.minutes}</h5>
+              <p>Minutes</p>
+              </div>
+              <div>
+              <h5>{time.seconds}</h5>
+              <p>Seconds</p>
+              </div>
+            </div>
+            <button>Buy Now</button>
+        </div>
+        {/* --------------------- Explore Our Products --------------- */}
+
+        <div className="badge-section">
+          <div className="badge"> </div>
+          <p className="mt-3">Our Products</p>
+        </div>
+
+        <div className="d-flex mt-5 justify-content-between">
+          <div className="Categories-section">
+            <h1>Explore Our Products</h1>
+          </div>
+          <div className="carousel-custom-controls">
+            <button onClick={handlePrev} className="carrousel-btn">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+            <button onClick={handleNext} className="carrousel-btn">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div className=" mt-5 ">
+          <Carousel ref={carouselRef} controls={false} indicators={false}>  
+                <Row>
+                  {products.slice(0, 8).map((product) => (
+                    <Col key={product.id} sm={3}>
+                      <div
+                        className="card"
+                        style={{ margin: "auto", marginBottom: "30px", height:"220px"}}
+                        id="hover-image-container"
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                      >
+                        <img
+                          src={product.images[0]}
+                          className="card-img-top"
+                          alt={product.title}
+                          id="card-img"
+                        />
+                        {isHovered && (
+                          <button
+                            className="add-to-cart-button"
+                            onClick={() => addToCart(item)}
+                          >
+                            Add to Cart
+                          </button>
+                        )}
+                        <i class="bi bi-heart" id="wishlist"></i>
+                        <i class="bi bi-eye" id="eye"></i>
+                        <div className="card-body">
+                          <h5 className="card-title">{product.title}</h5>
+                          {/* <p className="card-text">{product.description}</p>yyy */}
+                          <p className="card-text">${product.price}</p>
+                        </div>
+                      </div>
+                    </Col>
+                  ))}
+                </Row>
           </Carousel>
         </div>
       </Container>
