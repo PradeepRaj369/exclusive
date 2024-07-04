@@ -97,11 +97,7 @@ const addToCart = (item) => {
 };
 
   return (
-<<<<<<< HEAD
-    <ProviderContext.Provider value={{time, products , loading, cart, addToCart}}>
-=======
     <ProviderContext.Provider value={{time, products , loading,count,increment,decrement}}>
->>>>>>> e1334f32bd7818b97ab886fd8048a150c41eb87d
       {children}
     </ProviderContext.Provider>
   )
