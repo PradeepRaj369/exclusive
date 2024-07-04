@@ -1,0 +1,41 @@
+.error-page-navigation{
+    height: 160px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.error-page-navigation > div{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+}
+.home-link-error{
+    text-decoration: none;
+    color: rgb(105, 104, 104);
+}
+.Error-link{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.error-content{
+    width: 100%;
+    height:350px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+    padding-left: 30px;
+}
+.error-content h1{
+    font-size:110px;
+}
+.error-content button{
+    background: none;
+    border: none;
+    background-color: rgb(201, 3, 3);
+    padding: 10px 40px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+}

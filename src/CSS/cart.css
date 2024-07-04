@@ -141,18 +141,15 @@
 .coupon > div{
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     height:45px;
 }
 .carttotal{
     width: 95%;
-    /* border: 1px solid black; */
 }
 .Cartfields{
     width: 100%;
-    height: 60px;
-    align-items: center;
-    /* border: 1px solid green; */
+    height: 55px;
+    align-items:end;
     border-bottom: 1px solid black;
     display: flex;
     justify-content: space-between;

@@ -57,7 +57,7 @@ const formattedcount = count < 10 ? `0${count}` : count;
         </div>
         <div className="proceedscheckout">
             <div className='carttotal'>
-              <h4>Cart Total</h4>
+              <h4>Cart Total</h4><br />
               <div className='Cartfields'>
                 <p>Subtotal:</p>
                 <p>$1750</p>
