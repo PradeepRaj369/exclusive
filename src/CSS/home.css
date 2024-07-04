@@ -163,6 +163,8 @@
     height: 450px;
     display: flex;
     justify-content: end;
+    align-items: center;
+    
   }
   .jbl-product>img{
     width: 60%;
@@ -173,6 +175,8 @@
   .jbl-product-content{
     width: 40%;
     border: 2px solid black;
+    margin-left: 30px;
+   
   }
   .jbl-product-content>.jbl-timer{
     width: 60px;
@@ -197,6 +201,11 @@
     background-color: white;
   }
   .jbl-product-content>button{
-    background-color: #00e600;
+    background-color: #13c413;
     color: white;
+    border: none;
+    padding: 10px 34px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 25px;
   }

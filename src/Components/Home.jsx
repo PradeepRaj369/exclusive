@@ -271,15 +271,11 @@ const Home = () => {
                 </Row>
           </Carousel>
         </div>
-
-        <div className="jbl-product">
-              <img src="https://in.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwbc5ed184/JBL_BOOMBOX3_WIFI_HERO_37919_x4.png?sw=320&sh=320" alt="" />
-        </div>
+        <div className="jbl-product d-flex ">
         <div className="jbl-product-content">
-            <h6 style={{color:"#00e600"}}>Categories</h6>
-            <br />
+            <h6 style={{color:"#00e600" , marginBottom:"10px"}}>Categories</h6>
             <h1 className="text-light">Enhance Your</h1>
-            <h1 className="text-light">Music Experience</h1>
+            <h1 className="text-light mb-3">Music Experience</h1>
             <div className="jbl-timer">
               <div>
                 <h5>{time.days}</h5>
@@ -298,8 +294,12 @@ const Home = () => {
               <p>Seconds</p>
               </div>
             </div>
-            <button>Buy Now</button>
+            <button>Buy Now!</button>
         </div>
+              <img src="https://in.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwbc5ed184/JBL_BOOMBOX3_WIFI_HERO_37919_x4.png?sw=320&sh=320" alt="" />
+        </div>
+        
+        
         {/* --------------------- Explore Our Products --------------- */}
 
         <div className="badge-section">
@@ -359,6 +359,42 @@ const Home = () => {
                   ))}
                 </Row>
           </Carousel>
+        </div>
+        <div className="d-flex justify-content-center align-items-center mt-5 view-cart-btn">
+          <button className="view-btn">View All Products</button>
+        </div>
+
+        <div className="aboutthird">
+          <div className="aboutthridchild">
+            <div className="aboutthirdimg">
+              <div className="aboutthirdimg1">
+                <i class="bi bi-truck"></i>
+              </div>
+            </div>
+            <br />
+            <h4>FREE AND FAST DELIVERY</h4>
+            <p>Free delivery for all orders over $140</p>
+          </div>
+          <div className="aboutthridchild">
+            <div className="aboutthirdimg">
+              <div className="aboutthirdimg1">
+                <i class="bi bi-headset"></i>
+              </div>
+            </div>
+            <br />
+            <h4>24/7 CUSTOMER SERVICE</h4>
+            <p>Friendly 24/7 customer support</p>
+          </div>
+          <div className="aboutthridchild">
+            <div className="aboutthirdimg">
+              <div className="aboutthirdimg1">
+                <i class="bi bi-shield-check"></i>
+              </div>
+            </div>
+            <br />
+            <h4>MONEY BACK GUARANTEE</h4>
+            <p> We reurn money within 30 days</p>
+          </div>
         </div>
       </Container>
     </>

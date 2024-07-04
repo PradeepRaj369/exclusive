@@ -63,12 +63,12 @@ const Header = () => {
                   <i class="bi bi-search"></i>
                 </span>
               </div>
-              <Nav.Link className="">
+              <Link to="/wishlist" className="nav-link">
                 <i class="bi bi-heart fs-5"></i>
-              </Nav.Link>
-              <Nav.Link className="">
+              </Link>
+              <Link to="/cart" className="nav-link" >
                 <i class="bi bi-cart3 fs-5"></i>
-              </Nav.Link>
+              </Link>
             </div>
           </Navbar>
         </Container>
