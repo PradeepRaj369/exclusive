@@ -1,0 +1,42 @@
+
+.signup-section{
+    display: flex;
+    margin-top: 64px;
+    margin-bottom: 100px;
+}
+.main-content-3 {
+   margin: 200px 0px 0px 150px;
+}
+.main-content-3 h1{
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.main-content-3 p{
+    margin-top: 14px;
+    font-weight: 600;
+}
+.main-content-3 input{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(160, 153, 153);
+    width: 375px;
+    margin: 18px 0px;
+    padding: 5px 0px;
+}
+.main-content-3 .login{
+    border: none;
+    width: 150px;
+    margin-top: 18px;
+    color: white;
+    padding: 18px;
+    background-color: rgb(219, 52, 19);
+    border-radius: 10px;
+}
+.main-content-3 .forget-Password{
+    display: flex;
+}
+.forget-Password p{
+    margin: 36px 0px 0px 90px ;
+    color: rgb(219, 52, 19);
+    font-size: 17px;
+}

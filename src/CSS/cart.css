@@ -175,3 +175,9 @@
     color:white;
      font-weight:500;
 }
+#ellipsis{
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 15px;
+}

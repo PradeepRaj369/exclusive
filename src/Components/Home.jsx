@@ -1,11 +1,12 @@
 import React, { useContext, useRef, useState } from "react";
 import { Container, Row, Col, Carousel,Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../CSS/home.css";
 import { ProviderContext } from "./ContextProvider";
-const Home = () => {
+const Home = ({product}) => {
   const [isHovered, setIsHovered] = useState(false);
-  const { time, products, loading, addToCart, item } = useContext(ProviderContext);
+  const { time, products, loading, addToCart, item , setSelectedProduct} = useContext(ProviderContext);
+  const navigate=useNavigate();
   const carouselRef = useRef(null);
 
   if (loading) {
@@ -31,6 +32,12 @@ const Home = () => {
     }
   };
 
+  // -----product Details------
+  
+  const handleClick = (product) => {
+    setSelectedProduct(product);
+    navigate(`/product-details/${product.id}`);
+};
   return (
     <>
       <Container>
@@ -145,7 +152,7 @@ const Home = () => {
                         {isHovered && (
                           <button
                             className="add-to-cart-button"
-                            onClick={() => addToCart(item)}
+                            onClick={() => addToCart(product)}
                           >
                             Add to Cart
                           </button>
@@ -153,7 +160,7 @@ const Home = () => {
                         <i class="bi bi-heart" id="wishlist"></i>
                         <i class="bi bi-eye" id="eye"></i>
                         <div className="card-body">
-                          <h5 className="card-title">{product.title}</h5>
+                          <h5 className="card-title" id="ellipsis" onClick={() => handleClick(product)}>{product.title}</h5>
                           {/* <p className="card-text">{product.description}</p>yyy */}
                           <p className="card-text">${product.price}</p>
                         </div>
@@ -245,7 +252,7 @@ const Home = () => {
                         onMouseLeave={() => setIsHovered(false)}
                       >
                         <img
-                          src={product.images[0]}
+                          src={product.images[1]}
                           className="card-img-top"
                           alt={product.title}
                           id="card-img"
@@ -253,7 +260,7 @@ const Home = () => {
                         {isHovered && (
                           <button
                             className="add-to-cart-button"
-                            onClick={() => addToCart(item)}
+                            onClick={() => addToCart(product)}
                           >
                             Add to Cart
                           </button>
@@ -334,7 +341,7 @@ const Home = () => {
                         onMouseLeave={() => setIsHovered(false)}
                       >
                         <img
-                          src={product.images[0]}
+                          src={product.images[1]}
                           className="card-img-top"
                           alt={product.title}
                           id="card-img"
@@ -342,7 +349,7 @@ const Home = () => {
                         {isHovered && (
                           <button
                             className="add-to-cart-button"
-                            onClick={() => addToCart(item)}
+                            onClick={() => addToCart(product)}
                           >
                             Add to Cart
                           </button>
@@ -393,7 +400,7 @@ const Home = () => {
             </div>
             <br />
             <h4>MONEY BACK GUARANTEE</h4>
-            <p> We reurn money within 30 days</p>
+            <p> We return money within 30 days</p>
           </div>
         </div>
       </Container>

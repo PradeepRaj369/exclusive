@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Navbar,
   Nav,
@@ -9,7 +9,9 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../CSS/header.css";
+import { ProviderContext } from "./ContextProvider";
 const Header = () => {
+  const {getCartCount}= useContext(ProviderContext)
   return (
     <>
       <div className="d-flex justify-content-center align-items-center bg-dark text-light gap-5 header-section1">
@@ -67,7 +69,7 @@ const Header = () => {
                 <i class="bi bi-heart fs-5"></i>
               </Link>
               <Link to="/cart" className="nav-link" >
-                <i class="bi bi-cart3 fs-5"></i>
+                <i class="bi bi-cart3 fs-5"></i><span style={{color:"red", fontWeight:"bold"}}>{getCartCount()}</span>
               </Link>
             </div>
           </Navbar>

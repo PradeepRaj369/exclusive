@@ -1,0 +1,63 @@
+.signup-section{
+    display: flex;
+    margin-top: 64px;
+    margin-bottom: 100px;
+}
+.main-content-2 {
+   margin: 116px 0px 0px 150px;
+}
+.main-content-2 h1{
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.main-content-2 p{
+    margin-top: 14px;
+    font-weight: 600;
+}
+.main-content-2 input{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(160, 153, 153);
+    width: 375px;
+    margin: 18px 0px;
+    padding: 5px 0px;
+}
+.main-content-2 .create-account{
+    border: none;
+    width: 375px;
+    margin-top: 18px;
+    color: white;
+    padding: 18px;
+    background-color: rgb(219, 52, 19);
+    border-radius: 10px;
+}
+ .google-signup{
+    position: relative;
+    border: 2px solid rgba(170, 178, 185, 0.914);
+    width: 375px;
+    margin-top: 18px;
+    color: black;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+.google-signup img{
+    margin-left: -32px;
+    width:30px;
+}
+.already{
+    margin: 32px 0px 0px 62px;
+}
+.already p{
+    font-size: 17px;
+    color: rgb(109, 104, 104) ;
+    font-weight: 400;
+}
+.already p a{
+    margin-left: 10px;
+    color: black;
+    text-decoration: none;
+    border-bottom: 2px solid rgb(100, 96, 96);
+    font-weight: 500;
+    color: rgb(100, 96, 96);
+}

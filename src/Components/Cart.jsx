@@ -4,9 +4,23 @@ import { NavLink } from 'react-router-dom';
 import{ProviderContext} from "./ContextProvider"
 const Cart = () => {
 
-const{count,increment,decrement}=useContext(ProviderContext);
+const{count,increment,decrement,cart,total,removeFromCart, incrementQuantity, decrementQuantity}=useContext(ProviderContext);
 
-const formattedcount = count < 10 ? `0${count}` : count;
+// const formattedcount = count < 10 ? `0${count}` : count;
+const handleRemoveFromCart = (item) => {
+  removeFromCart(item.id);
+};
+const handleIncrementQuantity = (item) => {
+  incrementQuantity(item.id);
+};
+
+const handleDecrementQuantity = (item) => {
+  decrementQuantity(item.id);
+};
+let empty="";
+if (cart.length === 0) {
+ empty="Your Cart is Empty"
+}
   return (
     <>
       <div className="page-navigation">
@@ -24,25 +38,32 @@ const formattedcount = count < 10 ? `0${count}` : count;
             <p>Subtotal</p>
           </div>
         </div>
+       <h1 className='text-center'>{empty}</h1>
+        {cart.map(item=>(
         <div className="cartheadings">
-          <div className="subheaditems">
-            <div>
-              <img src="" alt="" style={{ width: "60px", height: "60px" }} />&nbsp;<span>LCD Monitor</span>
+          
+          <div className="subheaditems" key={item.id}>
+            <div style={{position:"absolute", zIndex:'1', color:"#c51919"}}>
+            <i class="bi bi-x-circle-fill" onClick={()=>handleRemoveFromCart(item)}></i>
             </div>
-            <div className='price'>$650</div>
+            <div style={{position:"relative"}}>
+              <img src={item.images} alt="" style={{ width: "60px", height: "60px" }} />&nbsp;<span id="ellipsis">{item.title}</span>
+            </div>
+            <div className='price'>{item.price}</div>
             <div className='quantity'>
               <div className='quaninside'>
                 <div>
-                {formattedcount}</div>
+                {item.quantity}</div>
                 <div>
-                  <i class="bi bi-chevron-up upbtn" onClick={increment}></i><br />
-                  <i class="bi bi-chevron-down downbtn" onClick={decrement}></i>
+                  <i class="bi bi-chevron-up upbtn" onClick={()=>handleIncrementQuantity(item)}></i><br />
+                  <i class="bi bi-chevron-down downbtn" onClick={()=>handleDecrementQuantity(item)}></i>
                 </div>
               </div>
             </div>
-            <div className='subtotal'>$650</div>
+            <div className='subtotal'>{item.quantity*item.price}</div>
           </div>
         </div>
+      ))}
         <div className='btnscart'>
           <button>Return To Shop</button>
           <button>Update Cart</button>
@@ -60,7 +81,7 @@ const formattedcount = count < 10 ? `0${count}` : count;
               <h4>Cart Total</h4><br />
               <div className='Cartfields'>
                 <p>Subtotal:</p>
-                <p>$1750</p>
+                <p>{total}</p>
               </div>
               <div className='Cartfields'>
                 <p>Shipping:</p>
@@ -68,7 +89,7 @@ const formattedcount = count < 10 ? `0${count}` : count;
               </div>
               <div className='totalcart'>
                 <p>Total:</p>
-                <p>$1750</p>
+                <p>{total}</p>
               </div>
               <div className='processcheck'>
               <button>Proccess to checkout</button>
@@ -76,6 +97,29 @@ const formattedcount = count < 10 ? `0${count}` : count;
             </div>
         </div>
       </div>
+
+
+
+{/* <div>
+      <h2>Cart</h2>
+      {cart.length === 0 ? (
+        <p>Your cart is empty</p>
+      ) : (
+        <>
+          <ul>
+            {cart.map(item => (
+              <li key={item.id}>
+                {item.title} - {item.price}-
+                <button onClick={() => removeFromCart(item)}>Remove</button>
+                <img src={item.images} alt="" />
+              </li>
+            
+            ))}
+          </ul>
+          <button onClick={clearCart}>Clear Cart</button>
+        </>
+      )}
+    </div> */}
     </>
   )
 }

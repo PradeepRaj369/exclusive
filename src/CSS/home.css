@@ -150,6 +150,11 @@
     margin-bottom: 50px;
    
   }
+  .Category-items>div:hover{
+    background-color:rgba(234, 42, 42, 0.856);
+    cursor: pointer;
+    color: white;
+  }
   .Category-items>div>i{
     font-size: 30px;
     margin-bottom: 20px;
@@ -209,3 +214,13 @@
     border-radius: 5px;
     margin-top: 25px;
   }
+  #ellipsis{
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 17px;
+}
+#ellipsis:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}

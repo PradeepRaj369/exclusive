@@ -9,7 +9,14 @@ const Footer = () => {
           <h1>Exclusive</h1> <br />
           <h6>Subscribe</h6>
           <p>Get 10% off your first order</p>
-          <input type="email" placeholder="Enter your Email" />
+          <div className="footer-input-section">
+            <input
+              type="email"
+              placeholder="Enter your Email"
+              className="footer-input"
+            />
+            <i class="bi bi-send-fill" style={{ marginRight: "30px" }}></i>
+          </div>
         </div>
         <div className="footerchild">
           <h1>Support</h1> <br />
@@ -37,6 +44,15 @@ const Footer = () => {
         <div className="footerchild">
           <h1>Dowload App</h1> <br />
           <p id="p-save">save s3 with App New User Only</p>
+          <div className="qr-code">
+            <i class="bi bi-qr-code"></i>
+          </div>
+          <div className="d-flex text-light gap-5 mt-1">
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-linkedin"></i>
+          </div>
         </div>
       </div>{" "}
       <div className="footer2">

@@ -13,13 +13,7 @@ const ContextProvider = ({children}) => {
   const initialMinutes = 60;
   const initialSeconds = 30;
 // -----------count Quantity cart page-------
-const[count,setCount]=useState(0);
-const increment= ()=>setCount(count+1);
-const decrement= ()=>{
-  if(count>0){
-  setCount(count-1);
-}
-}
+
 
   const [time, setTime] = useState({
     days: initialDays,
@@ -91,13 +85,65 @@ const decrement= ()=>{
 
 // ---------Cart Items----------
 const [cart, setCart] = useState([]);
+const [total,setTotal]=useState(0)
 
-const addToCart = (item) => {
-  setCart((prevCart) => [...prevCart, item]);
+const addToCart = (product) => {
+  setCart(prevCart => {
+      const isProductInCart = prevCart.find(cartItem => cartItem.id === product.id);
+      if (isProductInCart) {
+          return prevCart;
+      }
+      const updatedCart = [...prevCart, { ...product, quantity: 1 }];
+      updateTotal(updatedCart);
+      return updatedCart;
+  });
 };
 
+const updateTotal = (updatedCart) => {
+  const newTotal = updatedCart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  setTotal(newTotal);
+};
+
+const getCartCount = () => {
+  return cart.length;
+};
+
+
+const removeFromCart = (itemId) => {
+  setCart(prevCart => {
+      const updatedCart = prevCart.filter(item => item.id !== itemId);
+      updateTotal(updatedCart);
+      return updatedCart;
+  });
+};
+
+const incrementQuantity = (itemId) => {
+  setCart(prevCart => {
+      const updatedCart = prevCart.map(item =>
+          item.id === itemId ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      updateTotal(updatedCart);
+      return updatedCart;
+  });
+};
+
+const decrementQuantity = (itemId) => {
+  setCart(prevCart => {
+      const updatedCart = prevCart.map(item =>
+          item.id === itemId ? { ...item, quantity: Math.max(1, item.quantity - 1) } : item
+      );
+      updateTotal(updatedCart);
+      return updatedCart;
+  });
+};
+
+
+// -----product Details------
+const [selectedProduct, setSelectedProduct] = useState(null);
+
+
   return (
-    <ProviderContext.Provider value={{time, products , loading,count,increment,decrement}}>
+    <ProviderContext.Provider value={{total,time, products , loading, cart, addToCart , getCartCount,selectedProduct, setSelectedProduct, removeFromCart,incrementQuantity,decrementQuantity}}>
       {children}
     </ProviderContext.Provider>
   )
