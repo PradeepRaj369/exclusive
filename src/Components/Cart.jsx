@@ -44,10 +44,10 @@ if (cart.length === 0) {
           
           <div className="subheaditems" key={item.id}>
             <div style={{position:"absolute", zIndex:'1', color:"#c51919"}}>
-            <i class="bi bi-x-circle-fill" onClick={()=>handleRemoveFromCart(item)}></i>
+            <i class="bi bi-x-circle-fill cancelicon" onClick={()=>handleRemoveFromCart(item)}></i>
             </div>
             <div style={{position:"relative"}}>
-              <img src={item.images} alt="" style={{ width: "60px", height: "60px" }} />&nbsp;<span id="ellipsis">{item.title}</span>
+              <img src={item.images} alt="" style={{ width: "60px", height: "60px" }} />&nbsp;<div id="ellipsis">{item.title}</div>
             </div>
             <div className='price'>{item.price}</div>
             <div className='quantity'>
